@@ -50,6 +50,7 @@
                 </h2>
                 <div class="flex items-center mb-4 text-sm text-gray-600">
                     <span>By </span>
+                    {{-- Display author's name with a link if author exists, otherwise show 'Unknown Author' --}}
                     @if($posts[0]->author)
                         <a href="/blog?author={{ $posts[0]->author->username }}" class="text-indigo-500 hover:text-indigo-700 ml-1">{{ $posts[0]->author->name }}</a>
                     @else
